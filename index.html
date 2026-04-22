@@ -1,0 +1,1986 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ICON -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.ico"
+      type="image/x-icon"
+    />
+
+    <!-- TITLE -->
+    <title>SafeStep - Aprende Primeros Auxilios</title>
+
+    <!-- TAILWIND CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+
+    <!-- CUSTOM STYLES -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="font-sans antialiased text-gray-800 bg-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <div class="flex items-center space-x-2">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-primary-500 to-safe-500 rounded-xl flex items-center justify-center shadow-lg"
+            >
+              <i class="fas fa-heart-pulse text-white text-2xl"></i>
+            </div>
+            <span class="font-display font-bold text-2xl text-white"
+              >Safe<span class="text-safe-400">Step</span></span
+            >
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden lg:flex items-center space-x-8">
+            <a
+              href="#caracteristicas"
+              class="text-white/90 hover:text-white font-medium transition-colors"
+              >Características</a
+            >
+            <a
+              href="#simulaciones"
+              class="text-white/90 hover:text-white font-medium transition-colors"
+              >Simulaciones</a
+            >
+            <a
+              href="#productos"
+              class="text-white/90 hover:text-white font-medium transition-colors"
+              >Tienda</a
+            >
+            <a
+              href="#gamificacion"
+              class="text-white/90 hover:text-white font-medium transition-colors"
+              >Gamificación</a
+            >
+            <a
+              href="#faq"
+              class="text-white/90 hover:text-white font-medium transition-colors"
+              >FAQ</a
+            >
+          </div>
+
+          <!-- Auth Buttons -->
+          <div class="hidden lg:flex items-center space-x-4">
+            <a
+              href="1-1-login-page.html"
+              class="text-white font-medium hover:text-primary-200 transition-colors"
+              >Iniciar Sesión</a
+            >
+            <a
+              href="1-2-register-page.html"
+              class="bg-white text-primary-600 px-6 py-2.5 rounded-full font-semibold hover:bg-primary-50 transition-all shadow-lg hover:shadow-xl"
+            >
+              Comenzar Gratis
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="lg:hidden text-white text-2xl" id="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        class="mobile-menu fixed top-0 right-0 w-80 h-full bg-white shadow-2xl lg:hidden"
+        id="mobile-menu"
+      >
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-8">
+            <span class="font-display font-bold text-xl text-gray-800"
+              >SafeStep</span
+            >
+            <button class="text-gray-600 text-2xl" id="close-menu-btn">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="flex flex-col space-y-4">
+            <a
+              href="#caracteristicas"
+              class="text-gray-700 font-medium py-2 border-b border-gray-100"
+              >Características</a
+            >
+            <a
+              href="#simulaciones"
+              class="text-gray-700 font-medium py-2 border-b border-gray-100"
+              >Simulaciones</a
+            >
+            <a
+              href="#productos"
+              class="text-gray-700 font-medium py-2 border-b border-gray-100"
+              >Tienda</a
+            >
+            <a
+              href="#gamificacion"
+              class="text-gray-700 font-medium py-2 border-b border-gray-100"
+              >Gamificación</a
+            >
+            <a
+              href="#faq"
+              class="text-gray-700 font-medium py-2 border-b border-gray-100"
+              >FAQ</a
+            >
+            <div class="pt-4 space-y-3">
+              <a
+                href="1-1-login-page.html"
+                class="block text-center py-3 border-2 border-primary-500 text-primary-600 rounded-full font-semibold"
+                >Iniciar Sesión</a
+              >
+              <a
+                href="1-2-register-page.html"
+                class="block text-center py-3 bg-primary-500 text-white rounded-full font-semibold"
+                >Comenzar Gratis</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="gradient-hero min-h-screen flex items-center relative overflow-hidden"
+    >
+      <!-- Background Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-20 right-10 w-96 h-96 bg-safe-400/20 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-400/10 rounded-full blur-3xl"
+        ></div>
+      </div>
+
+      <!-- Floating Icons -->
+      <div
+        class="absolute top-32 right-[15%] text-white/20 floating"
+        style="animation-delay: 0s"
+      >
+        <i class="fas fa-heartbeat text-6xl"></i>
+      </div>
+      <div
+        class="absolute top-48 left-[20%] text-white/20 floating"
+        style="animation-delay: 1s"
+      >
+        <i class="fas fa-kit-medical text-5xl"></i>
+      </div>
+      <div
+        class="absolute bottom-32 right-[25%] text-white/20 floating"
+        style="animation-delay: 0.5s"
+      >
+        <i class="fas fa-user-injured text-4xl"></i>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Content -->
+          <div class="hero-animation">
+            <div
+              class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6"
+            >
+              <span
+                class="w-2 h-2 bg-safe-400 rounded-full mr-2 animate-pulse"
+              ></span>
+              <span class="text-white/90 text-sm font-medium"
+                >+50,000 usuarios ya están aprendiendo</span
+              >
+            </div>
+
+            <h1
+              class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+            >
+              Aprende Primeros Auxilios
+              <span
+                class="block text-transparent bg-clip-text bg-gradient-to-r from-safe-300 to-safe-400"
+              >
+                Salvando Vidas
+              </span>
+            </h1>
+
+            <p class="text-xl text-white/80 mb-8 leading-relaxed">
+              Domina técnicas de RCP, Heimlich, quemaduras y más mediante
+              simulaciones interactivas que te preparan para actuar ante
+              cualquier emergencia.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 mb-10">
+              <a
+                href="1-2-register-page.html"
+                class="btn-pulse inline-flex items-center justify-center bg-white text-primary-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-50 transition-all shadow-2xl"
+              >
+                <i class="fas fa-play-circle mr-2"></i>
+                Comenzar Ahora - ¡Gratis!
+              </a>
+              <a
+                href="#como-funciona"
+                class="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all"
+              >
+                <i class="fas fa-play mr-2"></i>
+                Ver Cómo Funciona
+              </a>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap items-center gap-6">
+              <div class="flex items-center space-x-2">
+                <div class="flex -space-x-2">
+                  <div
+                    class="w-10 h-10 rounded-full bg-primary-300 border-2 border-white flex items-center justify-center text-xs font-bold text-white"
+                  >
+                    MA
+                  </div>
+                  <div
+                    class="w-10 h-10 rounded-full bg-safe-400 border-2 border-white flex items-center justify-center text-xs font-bold text-white"
+                  >
+                    CP
+                  </div>
+                  <div
+                    class="w-10 h-10 rounded-full bg-accent-400 border-2 border-white flex items-center justify-center text-xs font-bold text-white"
+                  >
+                    JL
+                  </div>
+                  <div
+                    class="w-10 h-10 rounded-full bg-secondary-400 border-2 border-white flex items-center justify-center text-xs font-bold text-white"
+                  >
+                    AR
+                  </div>
+                </div>
+                <span class="text-white/80 text-sm">+50K usuarios activos</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-white/80 text-sm">4.8/5 calificación</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Content - Hero Image/Illustration -->
+          <div class="hidden lg:block relative">
+            <div class="relative">
+              <!-- Main Card -->
+              <div
+                class="bg-white rounded-3xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500"
+              >
+                <div class="flex items-center justify-between mb-6">
+                  <h3 class="font-bold text-gray-800 text-lg">
+                    Simulación RCP
+                  </h3>
+                  <span
+                    class="bg-safe-100 text-safe-700 px-3 py-1 rounded-full text-sm font-medium"
+                  >
+                    <i class="fas fa-check-circle mr-1"></i> En progreso
+                  </span>
+                </div>
+
+                <!-- Progress -->
+                <div class="mb-6">
+                  <div class="flex justify-between text-sm mb-2">
+                    <span class="text-gray-600">Paso 3 de 5</span>
+                    <span class="text-primary-600 font-semibold">60%</span>
+                  </div>
+                  <div class="w-full bg-gray-200 rounded-full h-3">
+                    <div
+                      class="bg-gradient-to-r from-primary-500 to-safe-500 h-3 rounded-full"
+                      style="width: 60%"
+                    ></div>
+                  </div>
+                </div>
+
+                <!-- Scenario -->
+                <div
+                  class="bg-red-50 rounded-xl p-4 mb-6 border-l-4 border-secondary-500"
+                >
+                  <p class="text-gray-700 text-sm">
+                    <i
+                      class="fas fa-exclamation-triangle text-secondary-500 mr-2"
+                    ></i>
+                    La víctima no responde. ¿Qué haces primero?
+                  </p>
+                </div>
+
+                <!-- Options -->
+                <div class="space-y-3">
+                  <button
+                    class="w-full text-left p-4 bg-primary-50 border-2 border-primary-500 rounded-xl text-gray-800 font-medium"
+                  >
+                    <i class="fas fa-hand-paper text-primary-500 mr-2"></i>
+                    Verificar seguridad de la escena
+                  </button>
+                  <button
+                    class="w-full text-left p-4 bg-gray-50 border-2 border-gray-200 rounded-xl text-gray-500 hover:border-gray-300 transition-colors"
+                  >
+                    <i class="fas fa-heartbeat text-gray-400 mr-2"></i>
+                    Iniciar compresiones inmediatamente
+                  </button>
+                  <button
+                    class="w-full text-left p-4 bg-gray-50 border-2 border-gray-200 rounded-xl text-gray-500 hover:border-gray-300 transition-colors"
+                  >
+                    <i class="fas fa-phone text-gray-400 mr-2"></i>
+                    Llamar a emergencias
+                  </button>
+                </div>
+              </div>
+
+              <!-- Floating Elements -->
+              <div
+                class="absolute -top-6 -right-6 bg-safe-500 text-white px-4 py-2 rounded-full shadow-lg badge-shine"
+              >
+                <i class="fas fa-trophy mr-1"></i> ¡95% Éxito!
+              </div>
+
+              <div
+                class="absolute -bottom-4 -left-4 bg-white px-4 py-3 rounded-xl shadow-lg"
+              >
+                <div class="flex items-center space-x-3">
+                  <div
+                    class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center"
+                  >
+                    <i
+                      class="fas fa-heartbeat text-primary-600 text-xl heartbeat"
+                    ></i>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-500">Ritmo actual</p>
+                    <p class="font-bold text-gray-800">110/min</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div
+          class="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator"
+        >
+          <a
+            href="#caracteristicas"
+            class="text-white/60 hover:text-white transition-colors"
+          >
+            <i class="fas fa-chevron-down text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white relative -mt-1">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div
+              class="stat-number font-display text-4xl md:text-5xl font-bold mb-2"
+            >
+              50K+
+            </div>
+            <p class="text-gray-600">Usuarios Activos</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="stat-number font-display text-4xl md:text-5xl font-bold mb-2"
+            >
+              5
+            </div>
+            <p class="text-gray-600">Módulos de Simulación</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="stat-number font-display text-4xl md:text-5xl font-bold mb-2"
+            >
+              98%
+            </div>
+            <p class="text-gray-600">Satisfacción</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="stat-number font-display text-4xl md:text-5xl font-bold mb-2"
+            >
+              12K+
+            </div>
+            <p class="text-gray-600">Vidas Preparadas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="caracteristicas" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="inline-block bg-primary-100 text-primary-600 px-4 py-2 rounded-full text-sm font-semibold mb-4"
+          >
+            CARACTERÍSTICAS PRINCIPALES
+          </span>
+          <h2
+            class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+          >
+            Una experiencia de aprendizaje
+            <span class="gradient-text"> como ninguna otra</span>
+          </h2>
+          <p class="text-xl text-gray-600">
+            SafeStep combina tecnología interactiva con contenido médico
+            certificado para brindarte la mejor formación en primeros auxilios.
+          </p>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div
+            class="feature-card card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+          >
+            <div
+              class="feature-icon w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg"
+            >
+              <i class="fas fa-laptop-medical text-white text-2xl"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-gray-900 mb-3">
+              Simulaciones Interactivas
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Practica con escenarios realistas de emergencias médicas. Toma
+              decisiones en tiempo real y recibe retroalimentación inmediata.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="feature-card card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+          >
+            <div
+              class="feature-icon w-16 h-16 bg-gradient-to-br from-safe-500 to-safe-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg"
+            >
+              <i class="fas fa-bolt text-white text-2xl"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-gray-900 mb-3">
+              Retroalimentación Instantánea
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Cada acción es evaluada al momento. Corrige errores al instante y
+              refuerza los conocimientos aprendidos.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="feature-card card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+          >
+            <div
+              class="feature-icon w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg"
+            >
+              <i class="fas fa-graduation-cap text-white text-2xl"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-gray-900 mb-3">
+              Aprendizaje Progresivo
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Micro-lecciones diarias, evaluaciones por módulo y certificados
+              que validan tu preparación.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div
+            class="feature-card card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+          >
+            <div
+              class="feature-icon w-16 h-16 bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg"
+            >
+              <i class="fas fa-gamepad text-white text-2xl"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-gray-900 mb-3">
+              Gamificación
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Gana XP, desbloquea insignias, mantén rachas de práctica y compite
+              en rankings con la comunidad.
+            </p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div
+            class="feature-card card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+          >
+            <div
+              class="feature-icon w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg"
+            >
+              <i class="fas fa-shopping-bag text-white text-2xl"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-gray-900 mb-3">
+              Tienda de Productos
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Adquiere kits de emergencia, torniquetes, botiquines y más. Todo
+              lo que necesitas para estar preparado.
+            </p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div
+            class="feature-card card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+          >
+            <div
+              class="feature-icon w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg"
+            >
+              <i class="fas fa-mobile-alt text-white text-2xl"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-gray-900 mb-3">
+              Accede Desde Cualquier Lugar
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Disponible en web y móvil. Aprende cuando quieras, donde quieras,
+              sin necesidad de equipo especializado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="como-funciona" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="inline-block bg-safe-100 text-safe-600 px-4 py-2 rounded-full text-sm font-semibold mb-4"
+          >
+            CÓMO FUNCIONA
+          </span>
+          <h2
+            class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+          >
+            Aprende en
+            <span class="gradient-text">3 simples pasos</span>
+          </h2>
+        </div>
+
+        <!-- Steps -->
+        <div class="grid md:grid-cols-3 gap-8 relative">
+          <!-- Connection Line -->
+          <div
+            class="hidden md:block absolute top-24 left-1/4 right-1/4 h-1 bg-gradient-to-r from-primary-200 via-safe-200 to-accent-200 rounded-full"
+          ></div>
+
+          <!-- Step 1 -->
+          <div class="relative">
+            <div
+              class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 relative z-10"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto"
+              >
+                1
+              </div>
+              <div class="text-center">
+                <h3 class="font-display text-xl font-bold text-gray-900 mb-4">
+                  Crea tu cuenta
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  Regístrate en segundos con tu correo, teléfono o redes
+                  sociales. Sin tarjeta de crédito requerida.
+                </p>
+                <div class="bg-primary-50 rounded-xl p-4">
+                  <div
+                    class="flex items-center justify-center space-x-4 text-primary-600"
+                  >
+                    <i class="fab fa-google text-2xl"></i>
+                    <i class="fab fa-facebook text-2xl"></i>
+                    <i class="fab fa-apple text-2xl"></i>
+                    <i class="fas fa-envelope text-2xl"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative">
+            <div
+              class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 relative z-10"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-safe-500 to-safe-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto"
+              >
+                2
+              </div>
+              <div class="text-center">
+                <h3 class="font-display text-xl font-bold text-gray-900 mb-4">
+                  Practica simulaciones
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  Elige entre RCP, atragantamiento, quemaduras, sismos y más.
+                  Cada escenario te guía paso a paso.
+                </p>
+                <div class="flex justify-center space-x-2">
+                  <span
+                    class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium"
+                    >RCP</span
+                  >
+                  <span
+                    class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium"
+                    >Heimlich</span
+                  >
+                  <span
+                    class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm font-medium"
+                    >Quemaduras</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative">
+            <div
+              class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 relative z-10"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto"
+              >
+                3
+              </div>
+              <div class="text-center">
+                <h3 class="font-display text-xl font-bold text-gray-900 mb-4">
+                  Obtén certificaciones
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  Gana XP, desbloquea insignias y obtén certificados que
+                  acreditan tus conocimientos.
+                </p>
+                <div class="flex justify-center space-x-3">
+                  <div
+                    class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center shadow-lg"
+                  >
+                    <i class="fas fa-award text-white text-xl"></i>
+                  </div>
+                  <div
+                    class="w-12 h-12 bg-gradient-to-br from-gray-300 to-gray-400 rounded-lg flex items-center justify-center shadow-lg"
+                  >
+                    <i class="fas fa-medal text-white text-xl"></i>
+                  </div>
+                  <div
+                    class="w-12 h-12 bg-gradient-to-br from-amber-600 to-amber-700 rounded-lg flex items-center justify-center shadow-lg"
+                  >
+                    <i class="fas fa-trophy text-white text-xl"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-16">
+          <a
+            href="1-2-register-page.html"
+            class="inline-flex items-center bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-primary-600 hover:to-primary-700 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+          >
+            <i class="fas fa-rocket mr-2"></i>
+            Comienza Ahora - ¡Es Gratis!
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simulations Section -->
+    <section
+      id="simulaciones"
+      class="py-20 bg-gradient-to-b from-gray-50 to-white"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="inline-block bg-secondary-100 text-secondary-600 px-4 py-2 rounded-full text-sm font-semibold mb-4"
+          >
+            SIMULACIONES DE EMERGENCIAS
+          </span>
+          <h2
+            class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+          >
+            Prepárate para
+            <span class="gradient-text-orange">cualquier situación</span>
+          </h2>
+          <p class="text-xl text-gray-600">
+            Nuestras simulaciones están basadas en protocolos internacionales y
+            diseñadas por expertos en primeros auxilios.
+          </p>
+        </div>
+
+        <!-- Simulations Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- RCP Card -->
+          <div
+            class="scene-card card-hover rounded-2xl overflow-hidden shadow-lg border border-gray-100"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center relative"
+            >
+              <div class="absolute inset-0 bg-black/20"></div>
+              <i class="fas fa-heartbeat text-white text-6xl z-10"></i>
+              <span
+                class="absolute top-4 right-4 bg-white text-red-600 px-3 py-1 rounded-full text-sm font-semibold z-10"
+              >
+                Popular
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold text-gray-900 mb-2">
+                RCP Básico
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Aprende a realizar compresiones torácicas y ventilaciones de
+                rescate en casos de paro cardio respiratorio.
+              </p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-1 text-gray-500 text-sm">
+                  <i class="fas fa-clock"></i>
+                  <span>~15 min</span>
+                </div>
+                <div
+                  class="flex items-center space-x-1 text-yellow-500 text-sm"
+                >
+                  <i class="fas fa-star"></i>
+                  <span>4.9</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Atragantamiento Card -->
+          <div
+            class="scene-card card-hover rounded-2xl overflow-hidden shadow-lg border border-gray-100"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center relative"
+            >
+              <div class="absolute inset-0 bg-black/20"></div>
+              <i class="fas fa-lungs text-white text-6xl z-10"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold text-gray-900 mb-2">
+                Atragantamiento
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Domina la maniobra de Heimlich y aprende a actuar ante
+                obstrucciones en adultos, niños y bebés.
+              </p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-1 text-gray-500 text-sm">
+                  <i class="fas fa-clock"></i>
+                  <span>~10 min</span>
+                </div>
+                <div
+                  class="flex items-center space-x-1 text-yellow-500 text-sm"
+                >
+                  <i class="fas fa-star"></i>
+                  <span>4.8</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quemaduras Card -->
+          <div
+            class="scene-card card-hover rounded-2xl overflow-hidden shadow-lg border border-gray-100"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center relative"
+            >
+              <div class="absolute inset-0 bg-black/20"></div>
+              <i class="fas fa-fire text-white text-6xl z-10"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold text-gray-900 mb-2">
+                Quemaduras
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Identifica tipos de quemaduras y aprende el tratamiento correcto
+                para cada grado de lesión.
+              </p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-1 text-gray-500 text-sm">
+                  <i class="fas fa-clock"></i>
+                  <span>~12 min</span>
+                </div>
+                <div
+                  class="flex items-center space-x-1 text-yellow-500 text-sm"
+                >
+                  <i class="fas fa-star"></i>
+                  <span>4.7</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sismos Card -->
+          <div
+            class="scene-card card-hover rounded-2xl overflow-hidden shadow-lg border border-gray-100"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-gray-500 to-gray-700 flex items-center justify-center relative"
+            >
+              <div class="absolute inset-0 bg-black/20"></div>
+              <i class="fas fa-house-crack text-white text-6xl z-10"></i>
+              <span
+                class="absolute top-4 right-4 bg-accent-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10"
+              >
+                Nuevo
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold text-gray-900 mb-2">
+                Sismos
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Aprende a actuar durante y después de un sismo. Protocolo PAS,
+                evacuación y primeros auxilios post-terremoto.
+              </p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-1 text-gray-500 text-sm">
+                  <i class="fas fa-clock"></i>
+                  <span>~20 min</span>
+                </div>
+                <div
+                  class="flex items-center space-x-1 text-yellow-500 text-sm"
+                >
+                  <i class="fas fa-star"></i>
+                  <span>4.9</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hemorragias Card -->
+          <div
+            class="scene-card card-hover rounded-2xl overflow-hidden shadow-lg border border-gray-100"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center relative"
+            >
+              <div class="absolute inset-0 bg-black/20"></div>
+              <i
+                class="fas fa-hand-holding-medical text-white text-6xl z-10"
+              ></i>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-bold text-gray-900 mb-2">
+                Cortes y Hemorragias
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Controla hemorragias con presión directa, elevación y uso de
+                torniquete en casos graves.
+              </p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-1 text-gray-500 text-sm">
+                  <i class="fas fa-clock"></i>
+                  <span>~15 min</span>
+                </div>
+                <div
+                  class="flex items-center space-x-1 text-yellow-500 text-sm"
+                >
+                  <i class="fas fa-star"></i>
+                  <span>4.8</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ver Todos Card -->
+          <div
+            class="scene-card card-hover rounded-2xl overflow-hidden shadow-lg border-2 border-dashed border-gray-300 flex items-center justify-center min-h-[320px]"
+          >
+            <div class="text-center p-8">
+              <div
+                class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-plus text-primary-600 text-2xl"></i>
+              </div>
+              <h3 class="font-display text-xl font-bold text-gray-900 mb-2">
+                Más escenarios
+              </h3>
+              <p class="text-gray-500 mb-4">
+                Nuevas simulaciones agregadas regularmente
+              </p>
+              <a
+                href="1-4-2-simulaciones.html"
+                class="text-primary-600 font-semibold hover:text-primary-700"
+              >
+                Ver todos los módulos <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gamification Section -->
+    <section
+      id="gamificacion"
+      class="py-20 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 relative overflow-hidden"
+    >
+      <!-- Background Elements -->
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-0 right-0 w-96 h-96 bg-safe-400/20 rounded-full blur-3xl"
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="inline-block bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4"
+          >
+            SISTEMA DE GAMIFICACIÓN
+          </span>
+          <h2
+            class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+          >
+            Aprende mientras
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-400"
+            >
+              te diviertes
+            </span>
+          </h2>
+          <p class="text-xl text-white/80">
+            Mantente motivado con XP, insignias, rachas de práctica y compete
+            con otros usuarios en nuestra comunidad.
+          </p>
+        </div>
+
+        <!-- Gamification Features -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- XP System -->
+          <div
+            class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all"
+          >
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center mb-4 shadow-lg"
+            >
+              <i class="fas fa-bolt text-white text-xl"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg mb-2">Sistema de XP</h3>
+            <p class="text-white/70 text-sm mb-4">
+              Gana puntos de experiencia por cada simulación, micro-lección y
+              evaluación completada.
+            </p>
+            <div class="bg-white/20 rounded-lg p-3">
+              <div class="flex items-center space-x-2 text-white">
+                <span class="font-bold">+100 XP</span>
+                <span class="text-white/60">por simulación</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Badges -->
+          <div
+            class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all"
+          >
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-purple-400 to-purple-500 rounded-xl flex items-center justify-center mb-4 shadow-lg"
+            >
+              <i class="fas fa-medal text-white text-xl"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg mb-2">Insignias</h3>
+            <p class="text-white/70 text-sm mb-4">
+              Desbloquea insignias por logros especiales y presume tus trofeos
+              virtuales.
+            </p>
+            <div class="flex space-x-2">
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center"
+              >
+                <i class="fas fa-award text-white text-sm"></i>
+              </div>
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-gray-300 to-gray-400 rounded-lg flex items-center justify-center"
+              >
+                <i class="fas fa-star text-white text-sm"></i>
+              </div>
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-amber-600 to-amber-700 rounded-lg flex items-center justify-center"
+              >
+                <i class="fas fa-trophy text-white text-sm"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Streaks -->
+          <div
+            class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all"
+          >
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-orange-400 to-orange-500 rounded-xl flex items-center justify-center mb-4 shadow-lg"
+            >
+              <i class="fas fa-fire text-white text-xl"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg mb-2">Rachas</h3>
+            <p class="text-white/70 text-sm mb-4">
+              Mantén tu racha de práctica diaria y recibe recompensas por tu
+              constancia.
+            </p>
+            <div class="flex items-center space-x-2">
+              <span class="text-3xl">🔥</span>
+              <span class="font-bold text-white text-2xl">15</span>
+              <span class="text-white/60 text-sm">días</span>
+            </div>
+          </div>
+
+          <!-- Leaderboard -->
+          <div
+            class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all"
+          >
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-safe-400 to-safe-500 rounded-xl flex items-center justify-center mb-4 shadow-lg"
+            >
+              <i class="fas fa-ranking-star text-white text-xl"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg mb-2">Rankings</h3>
+            <p class="text-white/70 text-sm mb-4">
+              Compite en tablas de clasificación semanales y globales con otros
+              usuarios.
+            </p>
+            <div class="flex items-center space-x-2">
+              <span class="text-yellow-400"><i class="fas fa-trophy"></i></span>
+              <span class="text-white font-semibold">Top 10%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Level System Preview -->
+        <div
+          class="mt-16 bg-white rounded-3xl p-8 shadow-2xl max-w-4xl mx-auto"
+        >
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <!-- Avatar -->
+            <div class="flex-shrink-0">
+              <div class="relative">
+                <div
+                  class="w-32 h-32 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-user text-white text-5xl"></i>
+                </div>
+                <div
+                  class="absolute -bottom-2 -right-2 bg-gradient-to-br from-yellow-400 to-yellow-500 text-white px-3 py-1 rounded-full font-bold text-sm shadow-lg"
+                >
+                  Nivel 15
+                </div>
+                <div
+                  class="absolute -top-2 -left-2 bg-gradient-to-br from-amber-600 to-amber-700 text-white px-2 py-1 rounded-full text-xs font-bold shadow-lg"
+                >
+                  P1
+                </div>
+              </div>
+            </div>
+
+            <!-- Progress -->
+            <div class="flex-grow text-center md:text-left">
+              <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">
+                ¡Sigue así, Juan!
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Has completado el 85% del módulo de Primeros Auxilios Básicos.
+              </p>
+
+              <!-- Progress Bar -->
+              <div class="mb-4">
+                <div class="flex justify-between text-sm mb-2">
+                  <span class="text-gray-600">Nivel 15</span>
+                  <span class="text-primary-600 font-semibold"
+                    >8,500 / 10,000 XP</span
+                  >
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-4">
+                  <div
+                    class="bg-gradient-to-r from-primary-500 to-safe-500 h-4 rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Next Badge -->
+              <div
+                class="flex items-center space-x-3 bg-yellow-50 rounded-lg p-3"
+              >
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center"
+                >
+                  <i class="fas fa-shield-halved text-white"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-500">Siguiente insignia</p>
+                  <p class="font-semibold text-gray-800">
+                    Guardián de la Comunidad
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="productos" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="inline-block bg-accent-100 text-accent-600 px-4 py-2 rounded-full text-sm font-semibold mb-4"
+          >
+            TIENDA DE EMERGENCIA
+          </span>
+          <h2
+            class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+          >
+            Equipamiento para tu
+            <span class="gradient-text-orange">preparación total</span>
+          </h2>
+          <p class="text-xl text-gray-600">
+            Complementa tu aprendizaje con productos de primera calidad. Todo lo
+            necesario para estar preparado ante cualquier emergencia.
+          </p>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Product 1 -->
+          <div
+            class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden card-hover"
+          >
+            <div class="relative">
+              <div
+                class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center"
+              >
+                <i class="fas fa-kit-medical text-gray-400 text-6xl"></i>
+              </div>
+              <span
+                class="absolute top-3 left-3 bg-secondary-500 text-white px-3 py-1 rounded-full text-xs font-bold"
+              >
+                -20%
+              </span>
+            </div>
+            <div class="p-5">
+              <div
+                class="flex items-center space-x-1 text-yellow-400 text-sm mb-2"
+              >
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span class="text-gray-500 ml-1">(128)</span>
+              </div>
+              <h3 class="font-bold text-gray-900 mb-1">
+                Botiquín de Primeros Auxilios
+              </h3>
+              <p class="text-gray-500 text-sm mb-3">
+                Kit completo para el hogar
+              </p>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-gray-900">S/ 89</span>
+                  <span class="text-sm text-gray-400 line-through ml-2"
+                    >S/ 112</span
+                  >
+                </div>
+                <button
+                  class="bg-primary-500 text-white w-10 h-10 rounded-full hover:bg-primary-600 transition-colors"
+                >
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden card-hover"
+          >
+            <div class="relative">
+              <div
+                class="h-48 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center"
+              >
+                <i class="fas fa-bandage text-red-400 text-6xl"></i>
+              </div>
+              <span
+                class="absolute top-3 left-3 bg-safe-500 text-white px-3 py-1 rounded-full text-xs font-bold"
+              >
+                Bestseller
+              </span>
+            </div>
+            <div class="p-5">
+              <div
+                class="flex items-center space-x-1 text-yellow-400 text-sm mb-2"
+              >
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span class="text-gray-500 ml-1">(256)</span>
+              </div>
+              <h3 class="font-bold text-gray-900 mb-1">
+                Torniquete Táctico CAT
+              </h3>
+              <p class="text-gray-500 text-sm mb-3">
+                Profesional, alta calidad
+              </p>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-gray-900">S/ 65</span>
+                </div>
+                <button
+                  class="bg-primary-500 text-white w-10 h-10 rounded-full hover:bg-primary-600 transition-colors"
+                >
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden card-hover"
+          >
+            <div class="relative">
+              <div
+                class="h-48 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center"
+              >
+                <i class="fas fa-seedling text-green-500 text-6xl"></i>
+              </div>
+              <span
+                class="absolute top-3 left-3 bg-accent-500 text-white px-3 py-1 rounded-full text-xs font-bold"
+              >
+                Nuevo
+              </span>
+            </div>
+            <div class="p-5">
+              <div
+                class="flex items-center space-x-1 text-yellow-400 text-sm mb-2"
+              >
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span class="text-gray-500 ml-1">(45)</span>
+              </div>
+              <h3 class="font-bold text-gray-900 mb-1">
+                Mochila de Emergencia 72h
+              </h3>
+              <p class="text-gray-500 text-sm mb-3">Para sismos y desastres</p>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-gray-900">S/ 249</span>
+                </div>
+                <button
+                  class="bg-primary-500 text-white w-10 h-10 rounded-full hover:bg-primary-600 transition-colors"
+                >
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div
+            class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden card-hover"
+          >
+            <div class="relative">
+              <div
+                class="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center"
+              >
+                <i class="fas fa-gem text-blue-400 text-6xl"></i>
+              </div>
+            </div>
+            <div class="p-5">
+              <div
+                class="flex items-center space-x-1 text-yellow-400 text-sm mb-2"
+              >
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span class="text-gray-500 ml-1">(89)</span>
+              </div>
+              <h3 class="font-bold text-gray-900 mb-1">
+                Kit de Entrenamiento RCP
+              </h3>
+              <p class="text-gray-500 text-sm mb-3">
+                Maniquí práctico + manual
+              </p>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-gray-900">S/ 189</span>
+                </div>
+                <button
+                  class="bg-primary-500 text-white w-10 h-10 rounded-full hover:bg-primary-600 transition-colors"
+                >
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- View All Button -->
+        <div class="text-center mt-12">
+          <a
+            href="#"
+            class="inline-flex items-center border-2 border-primary-500 text-primary-600 px-8 py-4 rounded-full font-bold hover:bg-primary-50 transition-all"
+          >
+            Ver todos los productos
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="inline-block bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-semibold mb-4"
+          >
+            TESTIMONIOS
+          </span>
+          <h2
+            class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+          >
+            Lo que dicen nuestros
+            <span class="gradient-text">usuarios</span>
+          </h2>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card rounded-2xl p-8 shadow-lg">
+            <div class="flex items-center space-x-1 text-yellow-400 mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              "Gracias a SafeStep pude salvar la vida de mi padre cuando tuvo un
+              paro cardíaco. Las simulaciones me prepararon para actuar con
+              calma y confianza."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center text-white font-bold"
+              >
+                MR
+              </div>
+              <div class="ml-4">
+                <p class="font-semibold text-gray-900">María Rodríguez</p>
+                <p class="text-gray-500 text-sm">Lima, Perú</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card rounded-2xl p-8 shadow-lg">
+            <div class="flex items-center space-x-1 text-yellow-400 mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              "Como profesor, implementé SafeStep en mis clases. Mis estudiantes
+              ahora saben RCP y primeros auxilios básicos. ¡Increíble
+              plataforma!"
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-safe-400 to-safe-600 rounded-full flex items-center justify-center text-white font-bold"
+              >
+                CP
+              </div>
+              <div class="ml-4">
+                <p class="font-semibold text-gray-900">Carlos Pérez</p>
+                <p class="text-gray-500 text-sm">Profesor - Arequipa</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card rounded-2xl p-8 shadow-lg">
+            <div class="flex items-center space-x-1 text-yellow-400 mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              "El sistema de gamificación me mantiene motivado. Llevo 45 días de
+              racha y ya tengo 5 certificaciones. ¡Aprender primeros auxilios es
+              adictivo!"
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-accent-400 to-accent-600 rounded-full flex items-center justify-center text-white font-bold"
+              >
+                LG
+              </div>
+              <div class="ml-4">
+                <p class="font-semibold text-gray-900">Lucía García</p>
+                <p class="text-gray-500 text-sm">Estudiante - Cusco</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <span
+            class="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold mb-4"
+          >
+            PREGUNTAS FRECUENTES
+          </span>
+          <h2
+            class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+          >
+            ¿Tienes alguna
+            <span class="gradient-text">pregunta?</span>
+          </h2>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div class="bg-gray-50 rounded-2xl overflow-hidden">
+            <button
+              class="accordion-btn w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
+            >
+              <span class="font-semibold text-gray-900"
+                >¿Cuánto cuesta usar SafeStep?</span
+              >
+              <i
+                class="fas fa-chevron-down text-gray-400 transition-transform"
+              ></i>
+            </button>
+            <div class="accordion-content px-6 pb-5">
+              <p class="text-gray-600">
+                SafeStep ofrece un plan gratuito con acceso a simulaciones
+                básicas, micro-lecciones y progreso básico. También tenemos un
+                plan Premium con contenido avanzado, certificaciones y funciones
+                exclusivas.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="bg-gray-50 rounded-2xl overflow-hidden">
+            <button
+              class="accordion-btn w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
+            >
+              <span class="font-semibold text-gray-900"
+                >¿Necesito experiencia previa en primeros auxilios?</span
+              >
+              <i
+                class="fas fa-chevron-down text-gray-400 transition-transform"
+              ></i>
+            </button>
+            <div class="accordion-content px-6 pb-5">
+              <p class="text-gray-600">
+                ¡No! SafeStep está diseñado para principiantes. Comenzarás desde
+                lo básico y progresivamente irás avanzando a temas más
+                complejos. Las simulaciones te guían paso a paso.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="bg-gray-50 rounded-2xl overflow-hidden">
+            <button
+              class="accordion-btn w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
+            >
+              <span class="font-semibold text-gray-900"
+                >¿Las certificaciones son válidas?</span
+              >
+              <i
+                class="fas fa-chevron-down text-gray-400 transition-transform"
+              ></i>
+            </button>
+            <div class="accordion-content px-6 pb-5">
+              <p class="text-gray-600">
+                Nuestras certificaciones son digitales y verificables mediante
+                código QR. Aunque no reemplazan la capacitación profesional
+                presencial, son un excelente complemento que demuestra tu
+                conocimiento en primeros auxilios.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="bg-gray-50 rounded-2xl overflow-hidden">
+            <button
+              class="accordion-btn w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
+            >
+              <span class="font-semibold text-gray-900"
+                >¿Puedo acceder desde mi teléfono?</span
+              >
+              <i
+                class="fas fa-chevron-down text-gray-400 transition-transform"
+              ></i>
+            </button>
+            <div class="accordion-content px-6 pb-5">
+              <p class="text-gray-600">
+                ¡Sí! SafeStep es completamente responsivo y funciona en
+                cualquier dispositivo: computadoras, tablets y teléfonos
+                móviles. También puedes descargar nuestra app para una
+                experiencia optimizada.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="bg-gray-50 rounded-2xl overflow-hidden">
+            <button
+              class="accordion-btn w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
+            >
+              <span class="font-semibold text-gray-900"
+                >¿Cómo funcionan los productos de la tienda?</span
+              >
+              <i
+                class="fas fa-chevron-down text-gray-400 transition-transform"
+              ></i>
+            </button>
+            <div class="accordion-content px-6 pb-5">
+              <p class="text-gray-600">
+                Ofrecemos productos de primeros auxilios de alta calidad con
+                envío a todo el país. Puedes pagar con tarjeta, transferencia o
+                billeteras digitales. Los pedidos llegan en 3-5 días hábiles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="py-20 bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 relative overflow-hidden"
+    >
+      <!-- Background -->
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-50"
+        ></div>
+      </div>
+
+      <div
+        class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
+      >
+        <h2
+          class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+        >
+          ¿Listo para salvar vidas?
+        </h2>
+        <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+          Únete a más de 50,000 personas que ya están aprendiendo primeros
+          auxilios con SafeStep. Tu primera simulación gratuita te espera.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="#"
+            class="btn-pulse inline-flex items-center justify-center bg-white text-primary-600 px-10 py-5 rounded-full font-bold text-lg hover:bg-primary-50 transition-all shadow-2xl"
+          >
+            <i class="fas fa-rocket mr-2"></i>
+            Comenzar Gratis Ahora
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center justify-center border-2 border-white text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/10 transition-all"
+          >
+            <i class="fas fa-play mr-2"></i>
+            Ver Demo
+          </a>
+        </div>
+
+        <!-- Trust -->
+        <div
+          class="mt-12 flex flex-wrap justify-center items-center gap-8 text-white/80"
+        >
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-check-circle text-safe-400"></i>
+            <span>Sin tarjeta de crédito</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-check-circle text-safe-400"></i>
+            <span>Contenido certificado</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-check-circle text-safe-400"></i>
+            <span>Cancela cuando quieras</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-gray-900 py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8"
+        >
+          <div class="flex flex-col items-start gap-4">
+            <!-- Footer -->
+            <div class="mt-16 border-t border-gray-800 pt-8">
+              <div
+                class="flex flex-col md:flex-row justify-between items-center gap-4"
+              >
+                <div class="flex items-center space-x-2">
+                  <div
+                    class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center"
+                  >
+                    <i class="fas fa-heart-pulse text-white text-lg"></i>
+                  </div>
+                  <span class="font-display font-bold text-xl text-white"
+                    >SafeStep</span
+                  >
+                </div>
+                <div
+                  class="flex flex-wrap justify-center gap-6 text-white/70 text-sm"
+                >
+                  <a href="#" class="hover:text-white transition-colors"
+                    >Sobre nosotros</a
+                  >
+                  <a
+                    href="mailto:contacto@safestep.com"
+                    class="hover:text-white transition-colors"
+                    >Contacto</a
+                  >
+                  <a href="#" class="hover:text-white transition-colors"
+                    >Términos de servicio</a
+                  >
+                  <a href="#" class="hover:text-white transition-colors"
+                    >Política de privacidad</a
+                  >
+                </div>
+                <div class="flex items-center space-x-4">
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+                  >
+                    <i class="fab fa-facebook-f text-white"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+                  >
+                    <i class="fab fa-twitter text-white"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+                  >
+                    <i class="fab fa-instagram text-white"></i>
+                  </a>
+                </div>
+              </div>
+              <p class="text-center text-white/50 text-sm mt-8">
+                © 2026 SafeStep. Todos los derechos reservados.
+              </p>
+            </div>
+            <div>
+              <span class="font-display font-bold text-2xl"
+                >Safe<span class="text-safe-400">Step</span></span
+              >
+            </div>
+            <p class="text-gray-400 mb-6 max-w-md">
+              La plataforma interactiva para aprender primeros auxilios.
+              Simulaciones, certificaciones y todo lo que necesitas para estar
+              preparado ante cualquier emergencia.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div>
+            <h4 class="font-bold text-lg mb-4">Producto</h4>
+            <ul class="space-y-3 text-gray-400">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Características</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Simulaciones</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Precios</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Tienda</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >App Móvil</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4">Empresa</h4>
+            <ul class="space-y-3 text-gray-400">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Sobre Nosotros</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Carreras</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Prensa</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4">Legal</h4>
+            <ul class="space-y-3 text-gray-400">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Términos de Servicio</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Política de Privacidad</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Política de Cookies</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">GDPR</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Licencias</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm mb-4 md:mb-0">
+              © 2025 SafeStep. Todos los derechos reservados.
+            </p>
+            <div class="flex items-center space-x-4 text-gray-400 text-sm">
+              <span class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-1"></i>
+                Lima, Perú
+              </span>
+              <span>|</span>
+              <span
+                >Hecho con <i class="fas fa-heart text-red-500 mx-1"></i> para
+                salvar vidas</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Navbar scroll effect
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("bg-primary-700/95", "nav-blur", "shadow-lg");
+        } else {
+          navbar.classList.remove("bg-primary-700/95", "nav-blur", "shadow-lg");
+        }
+      });
+
+      // Mobile menu
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const closeMenuBtn = document.getElementById("close-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("active");
+      });
+
+      closeMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+      });
+
+      // Close mobile menu when clicking links
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("active");
+        });
+      });
+
+      // FAQ Accordion
+      const accordionBtns = document.querySelectorAll(".accordion-btn");
+      accordionBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const content = btn.nextElementSibling;
+          const icon = btn.querySelector("i");
+
+          // Close all others
+          accordionBtns.forEach((otherBtn) => {
+            if (otherBtn !== btn) {
+              otherBtn.nextElementSibling.classList.remove("active");
+              otherBtn.querySelector("i").style.transform = "rotate(0deg)";
+            }
+          });
+
+          // Toggle current
+          content.classList.toggle("active");
+          icon.style.transform = content.classList.contains("active")
+            ? "rotate(180deg)"
+            : "rotate(0deg)";
+        });
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fadeIn");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".card-hover, .feature-card, .scene-card")
+        .forEach((el) => {
+          observer.observe(el);
+        });
+    </script>
+  </body>
+</html>
