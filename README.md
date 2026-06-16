@@ -16,9 +16,10 @@ SafeStep es una landing page moderna y responsiva diseñada para promocionar una
 
 ## Tecnologías Utilizadas
 
-- **HTML5** - Estructura semántica
-- **Tailwind CSS** (CDN) - Estilos y diseño responsivo
-- **JavaScript** - Interactividad y animaciones
+- **HTML5** - Estructura semántica con landmarks ARIA
+- **Tailwind CSS v3** (PostCSS) - Estilos utilitarios con purging automático
+- **Vite 6** - Build tool con HMR, minificación y optimización de assets
+- **JavaScript (ES Modules)** - Interactividad y animaciones
 - **Google Fonts** - Tipografía (Inter, Poppins)
 - **Font Awesome** - Iconos
 
@@ -26,19 +27,29 @@ SafeStep es una landing page moderna y responsiva diseñada para promocionar una
 
 ```
 safestep-landing-page/
-├── index.html           # Página principal
-├── style.css            # Estilos personalizados
-├── script.js            # Funcionalidad JavaScript
-├── tailwind-config.js   # Configuración de Tailwind
-├── README.md            # Este archivo
-└── assets/
-    └── images/
-        ├── logo.ico
-        ├── logo.png
-        ├── usuarios/    # Avatares de usuarios
-        └── cursos/
-            ├── portada/ # Imágenes de portadas
-            └── logo/    # Logos de cursos
+├── src/
+│   ├── styles/
+│   │   └── main.css        # Estilos Tailwind + CSS personalizado
+│   └── scripts/
+│       └── main.js         # JavaScript modular
+├── assets/
+│   └── images/
+│       ├── logo.ico
+│       ├── logo.png
+│       ├── usuarios/       # Avatares de usuarios
+│       └── cursos/
+│           ├── portada/    # Imágenes de portadas
+│           └── logo/       # Logos de cursos
+├── dist/                   # Archivos generados (build)
+├── index.html              # Página principal
+├── package.json            # Dependencias y scripts
+├── vite.config.js          # Configuración de Vite
+├── tailwind.config.js      # Configuración de Tailwind
+├── postcss.config.js       # Configuración de PostCSS
+├── sitemap.xml             # Sitemap para SEO
+├── robots.txt              # Configuración de crawlers
+├── .gitignore
+└── README.md
 ```
 
 ## Secciones de la Landing Page
@@ -50,42 +61,44 @@ safestep-landing-page/
 5. **Simulaciones** - 5 módulos de emergencia
 6. **Gamificación** - Sistema de puntos y logros
 7. **Tienda** - Productos de emergencia
-8. **FAQ** - Preguntas frecuentes
-9. **Footer** - Enlaces y redes sociales
+8. **Testimonios** - Opiniones de usuarios
+9. **FAQ** - Preguntas frecuentes
+10. **Footer** - Enlaces y redes sociales
 
 ## Colores del Tema
 
 | Color | Hex | Uso |
-|-------|-----|-----|
+|-------|-----|------|
 | Primary | `#0ea5e9` | Azul principal |
-| Safe | `#22c55e` | Verde seguras |
-| Secondary | `#ef4444` | Rojos/Emergencias |
-| Accent | `#f97316` | Naranja/Destacados |
+| Safe | `#22c55e` | Verde acciones seguras |
+| Secondary | `#ef4444` | Rojo emergencias |
+| Accent | `#f97316` | Naranja destacados |
 
-## Cómo Ver la Landing Page
-
-1. Clona o descarga el repositorio
-2. Abre el archivo `index.html` en tu navegador
-3. O usa un servidor local:
+## Cómo Ejecutar Localmente
 
 ```bash
-# Con Python
-python -m http.server 8000
+# Instalar dependencias
+npm install
 
-# Con Node.js (si tienes http-server)
-npx http-server
+# Iniciar servidor de desarrollo con HMR
+npm run dev
+
+# Generar build de producción
+npm run build
+
+# Previsualizar build de producción
+npm run preview
 ```
 
-## Personalización
+## Mejoras Implementadas
 
-### Colores
-Modifica `tailwind-config.js` para cambiar el tema de colores.
-
-### Contenido
-Edita directamente el archivo `index.html` para modificar textos, imágenes o secciones.
-
-### Estilos
-Agrega estilos personalizados en `style.css`.
+- **Build system**: Vite + Tailwind CLI con purging automático (CSS 90% más pequeño)
+- **SEO**: Meta tags (Open Graph, Twitter Cards), sitemap.xml, robots.txt
+- **Accesibilidad**: Skip-to-content, roles ARIA, etiquetas en interactive elements
+- **Rendimiento**: Lazy loading en imágenes, CSS purgado, minificación
+- **Semántica HTML**: Landmarks `<main>`, `<nav>`, `<footer>` con roles ARIA
+- **Footer**: Estructura limpia sin duplicación de contenido
+- **Copyright**: Unificado a 2026
 
 ## Compatibilidad
 
