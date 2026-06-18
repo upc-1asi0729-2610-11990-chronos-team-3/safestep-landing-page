@@ -191,6 +191,28 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // ---------- YouTube Videos (Click-to-Play) ----------
+    document.querySelectorAll(".video-card[data-video-id]").forEach((card) => {
+        const thumb = card.querySelector(".video-thumb");
+        const videoId = card.dataset.videoId;
+
+        thumb.addEventListener("click", function (e) {
+            if (this.querySelector("iframe")) return;
+
+            const iframe = document.createElement("iframe");
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+            iframe.allow =
+                "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            iframe.allowFullscreen = true;
+            iframe.title = this.querySelector(".play-btn")
+                ? "Reproducir video"
+                : "Video";
+
+            this.innerHTML = "";
+            this.appendChild(iframe);
+        });
+    });
+
     // ---------- Counter Animation ----------
     const statNumbers = document.querySelectorAll(".stat-item h3");
 
