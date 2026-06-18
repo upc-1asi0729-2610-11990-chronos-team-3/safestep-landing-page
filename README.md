@@ -1,6 +1,6 @@
 # SafeStep - Landing Page
 
-Landing page de **SafeStep**, una plataforma interactiva para aprender primeros auxilios mediante simulaciones realistas y gamificación.
+Landing page de **SafeStep**, una plataforma interactiva para aprender primeros auxilios mediante simulaciones realistas y gamificación. Desarrollada por **Chronos**, una startup de estudiantes de Ingeniería de Software de la UPC.
 
 ## Descripción
 
@@ -13,42 +13,34 @@ SafeStep es una landing page moderna y responsiva diseñada para promocionar una
 - **Tienda de Emergencia**: Botiquines, torniquetes, mochilas de emergencia
 - **Diseño Responsivo**: Compatible con dispositivos móviles, tablets y desktop
 - **Animaciones Modernas**: Efectos de scroll, transiciones y elementos flotantes
+- **Videos Integrados**: Reproductor YouTube integrado con click-to-play
 
 ## Tecnologías Utilizadas
 
-- **HTML5** - Estructura semántica con landmarks ARIA
-- **Tailwind CSS v3** (PostCSS) - Estilos utilitarios con purging automático
-- **Vite 6** - Build tool con HMR, minificación y optimización de assets
-- **JavaScript (ES Modules)** - Interactividad y animaciones
-- **Google Fonts** - Tipografía (Inter, Poppins)
-- **Font Awesome** - Iconos
+- **HTML5** - Estructura semántica con SEO (Open Graph, Twitter Cards)
+- **CSS3 Puro** - Variables CSS, Flexbox, Grid, animaciones, diseño responsivo
+- **JavaScript (ES6+) Nativo** - DOM API, Intersection Observer, eventos
+- **Bootstrap Icons** - Librería de iconos (CDN)
+- **Google Fonts** - Tipografía Inter y Poppins
 
 ## Estructura de Archivos
 
 ```
 safestep-landing-page/
-├── src/
-│   ├── styles/
-│   │   └── main.css        # Estilos Tailwind + CSS personalizado
-│   └── scripts/
-│       └── main.js         # JavaScript modular
 ├── assets/
 │   └── images/
 │       ├── logo.ico
-│       ├── logo.png
-│       ├── usuarios/       # Avatares de usuarios
-│       └── cursos/
-│           ├── portada/    # Imágenes de portadas
-│           └── logo/       # Logos de cursos
-├── dist/                   # Archivos generados (build)
-├── index.html              # Página principal
-├── package.json            # Dependencias y scripts
-├── vite.config.js          # Configuración de Vite
-├── tailwind.config.js      # Configuración de Tailwind
-├── postcss.config.js       # Configuración de PostCSS
-├── sitemap.xml             # Sitemap para SEO
-├── robots.txt              # Configuración de crawlers
-├── .gitignore
+│       ├── logo-chronos.png
+│       ├── logo-safestep.png
+│       ├── banner-hero.png
+│       ├── cursos/           # Portadas de cursos (6)
+│       ├── productos/        # Imágenes de tienda (4)
+│       ├── usuarios/         # Avatares de testimonios (3)
+│       └── integrantes/      # Fotos del equipo (4)
+├── about.html               # Página "Acerca de"
+├── index.html               # Landing page principal
+├── styles.css               # Todos los estilos del proyecto
+├── script.js                # JavaScript del proyecto
 └── README.md
 ```
 
@@ -58,12 +50,21 @@ safestep-landing-page/
 2. **Estadísticas** - 50K+ usuarios, 5 módulos, 98% satisfacción
 3. **Características** - 6 features principales
 4. **Cómo Funciona** - 3 pasos para empezar
-5. **Simulaciones** - 5 módulos de emergencia
+5. **Simulaciones** - 6 cursos de emergencia
 6. **Gamificación** - Sistema de puntos y logros
-7. **Tienda** - Productos de emergencia
-8. **Testimonios** - Opiniones de usuarios
-9. **FAQ** - Preguntas frecuentes
+7. **Tienda** - 4 productos de emergencia
+8. **Testimonios** - Slider con opiniones de usuarios
+9. **FAQ** - 5 preguntas frecuentes
 10. **Footer** - Enlaces y redes sociales
+
+## Secciones de About Page
+
+1. **Hero** - Presentación Chronos + SafeStep
+2. **Misión y Visión**
+3. **Valores** - 4 principios
+4. **Equipo** - 4 integrantes del equipo
+5. **Videos** - Reproductor YouTube integrado
+6. **Galería** - Screenshots de la plataforma
 
 ## Colores del Tema
 
@@ -77,28 +78,29 @@ safestep-landing-page/
 ## Cómo Ejecutar Localmente
 
 ```bash
-# Instalar dependencias
-npm install
+# No requiere instalación de dependencias
+# Simplemente abre index.html en tu navegador
 
-# Iniciar servidor de desarrollo con HMR
-npm run dev
+# O usa un servidor local (ej. con Python)
+python -m http.server 8000
 
-# Generar build de producción
-npm run build
-
-# Previsualizar build de producción
-npm run preview
+# O con la extensión Live Server de VS Code
 ```
 
-## Mejoras Implementadas
+## Responsive Design
 
-- **Build system**: Vite + Tailwind CLI con purging automático (CSS 90% más pequeño)
-- **SEO**: Meta tags (Open Graph, Twitter Cards), sitemap.xml, robots.txt
-- **Accesibilidad**: Skip-to-content, roles ARIA, etiquetas en interactive elements
-- **Rendimiento**: Lazy loading en imágenes, CSS purgado, minificación
-- **Semántica HTML**: Landmarks `<main>`, `<nav>`, `<footer>` con roles ARIA
-- **Footer**: Estructura limpia sin duplicación de contenido
-- **Copyright**: Unificado a 2026
+| Breakpoint | Target |
+|------------|--------|
+| 992px | Tablets / Landscape |
+| 768px | Tablets / Mobile |
+| 480px | Mobile pequeño |
+
+## Videos Integrados
+
+Los videos en la página About utilizan thumbnails de YouTube con reproducción click-to-play:
+
+- **Sobre el Proyecto**: https://youtu.be/jmA1L_1_8bk
+- **Sobre SafeStep**: https://youtu.be/-RuGA9r1EsM
 
 ## Compatibilidad
 
@@ -109,4 +111,4 @@ npm run preview
 
 ## Licencia
 
-Todos los derechos reservados - SafeStep 2026
+Todos los derechos reservados - SafeStep by Chronos 2026
