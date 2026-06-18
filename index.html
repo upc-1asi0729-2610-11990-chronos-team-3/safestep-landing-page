@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafeStep - Aprende Primeros Auxilios de Forma Interactiva</title>
+  <meta name="description" content="SafeStep es la plataforma interactiva de primeros auxilios que te prepara para salvar vidas. Simulaciones realistas, gamificación y certificación.">
+  <meta name="keywords" content="primeros auxilios, RCP, simulaciones, aprendizaje interactivo, certificación, emergencias">
+  <meta property="og:title" content="SafeStep - Aprende Primeros Auxilios de Forma Interactiva">
+  <meta property="og:description" content="Plataforma interactiva de primeros auxilios con simulaciones realistas y gamificación.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/logo-safestep.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo-safestep.png" alt="SafeStep Logo" loading="lazy">
+        Safe<span>Step</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Características</a></li>
+        <li><a href="#courses">Cursos</a></li>
+        <li><a href="#gamification">Gamificación</a></li>
+        <li><a href="#store">Tienda</a></li>
+        <li><a href="about.html">Acerca de</a></li>
+        <li><a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Comenzar Gratis</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-overlay"></div>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content fade-in">
+        <div class="hero-badge">
+          <i class="bi bi-shield-check"></i>
+          +50,000 estudiantes capacitados
+        </div>
+        <h1>Aprende a salvar vidas con <span>SafeStep</span></h1>
+        <p>La plataforma interactiva de primeros auxilios que combina simulaciones realistas, gamificación y certificación para prepararte ante cualquier emergencia.</p>
+        <div class="hero-buttons">
+          <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Comenzar Gratis <i class="bi bi-arrow-right"></i>
+          </a>
+          <a href="#features" class="btn btn-secondary">
+            <i class="bi bi-play-circle"></i> Ver Demo
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <h3>50K+</h3>
+            <p>Estudiantes</p>
+          </div>
+          <div class="hero-stat">
+            <h3>5</h3>
+            <p>Módulos</p>
+          </div>
+          <div class="hero-stat">
+            <h3>98%</h3>
+            <p>Satisfacción</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual fade-in-right">
+        <img src="assets/images/banner-hero.png" alt="SafeStep Banner" loading="lazy" style="max-width: 100%; border-radius: var(--radius-lg); margin-bottom: 24px; box-shadow: var(--shadow-xl);">
+        <div class="floating-card">
+          <div class="card-header">
+            <div class="pulse-dot"></div>
+            <div>
+              <h4>Simulación: RCP</h4>
+              <span>En progreso</span>
+            </div>
+          </div>
+          <div class="sim-progress">
+            <div class="bar"><div class="fill"></div></div>
+            <span>72% completado</span>
+          </div>
+          <div class="sim-actions">
+            <button class="active-sim">Compresiones</button>
+            <button>Ventilaciones</button>
+            <button>Ritmo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== STATS ====== -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3>50,000+</h3>
+          <p>Estudiantes capacitados</p>
+        </div>
+        <div class="stat-item">
+          <h3>5</h3>
+          <p>Módulos interactivos</p>
+        </div>
+        <div class="stat-item">
+          <h3>98%</h3>
+          <p>Tasa de satisfacción</p>
+        </div>
+        <div class="stat-item">
+          <h3>12,000+</h3>
+          <p>Certificaciones emitidas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FEATURES ====== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Características</span>
+        <h2 class="section-title">Todo lo que necesitas para aprender primeros auxilios</h2>
+        <p class="section-subtitle">SafeStep combina tecnología educativa con contenido médico avalado para ofrecerte la mejor experiencia de aprendizaje.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon blue"><i class="bi bi-phone"></i></div>
+          <h3>Simulaciones Interactivas</h3>
+          <p>Practica con escenarios realistas de emergencias médicas, desde RCP hasta control de hemorragias.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon green"><i class="bi bi-check-circle"></i></div>
+          <h3>Feedback en Tiempo Real</h3>
+          <p>Recibe correcciones inmediatas sobre tu técnica con nuestro sistema de evaluación inteligente.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon orange"><i class="bi bi-graph-up-arrow"></i></div>
+          <h3>Aprendizaje Progresivo</h3>
+          <p>Contenido diseñado por niveles: desde conceptos básicos hasta técnicas avanzadas de primeros auxilios.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon purple"><i class="bi bi-trophy"></i></div>
+          <h3>Gamificación</h3>
+          <p>Gana puntos, insignias y rachas mientras aprendes. Compite con otros y mantén la motivación.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon red"><i class="bi bi-bag"></i></div>
+          <h3>Tienda Especializada</h3>
+          <p>Adquiere botiquines, torniquetes y equipos de emergencia recomendados por nuestros instructores.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon teal"><i class="bi bi-phone"></i></div>
+          <h3>Acceso Multiplataforma</h3>
+          <p>Accede desde cualquier dispositivo. Aprende a tu ritmo, cuando y donde quieras.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== HOW IT WORKS ====== -->
+  <section class="section how-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Cómo funciona</span>
+        <h2 class="section-title">Tres pasos para convertirte en un experto en primeros auxilios</h2>
+        <p class="section-subtitle">Nuestro método de aprendizaje está diseñado para ser práctico, efectivo y accesible para todos.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card fade-in">
+          <div class="step-circle">
+            <span class="step-num">1</span>
+            <i class="bi bi-person-plus"></i>
+          </div>
+          <h3>Crea tu cuenta</h3>
+          <p>Regístrate gratis y accede a nuestro catálogo completo de cursos interactivos de primeros auxilios.</p>
+          <ul class="step-details">
+            <li><i class="bi bi-check-circle-fill"></i> Sin compromiso</li>
+            <li><i class="bi bi-check-circle-fill"></i> Acceso inmediato a todos los cursos</li>
+            <li><i class="bi bi-check-circle-fill"></i> Progreso sincronizado entre dispositivos</li>
+          </ul>
+        </div>
+        <div class="step-card fade-in">
+          <div class="step-circle">
+            <span class="step-num">2</span>
+            <i class="bi bi-arrow-repeat"></i>
+          </div>
+          <h3>Practica con simulaciones</h3>
+          <p>Aprende haciendo con escenarios realistas y feedback personalizado en tiempo real.</p>
+          <ul class="step-details">
+            <li><i class="bi bi-check-circle-fill"></i> Escenarios interactivos realistas</li>
+            <li><i class="bi bi-check-circle-fill"></i> Feedback correctivo en tiempo real</li>
+            <li><i class="bi bi-check-circle-fill"></i> Estadísticas detalladas de tu progreso</li>
+          </ul>
+        </div>
+        <div class="step-card fade-in">
+          <div class="step-circle">
+            <span class="step-num">3</span>
+            <i class="bi bi-patch-check-fill"></i>
+          </div>
+          <h3>Obtén tu certificación</h3>
+          <p>Completa los módulos, aprueba las evaluaciones y recibe tu certificado avalado por instructores.</p>
+          <ul class="step-details">
+            <li><i class="bi bi-check-circle-fill"></i> Certificado digital descargable</li>
+            <li><i class="bi bi-check-circle-fill"></i> Comparte tu logro en redes sociales</li>
+            <li><i class="bi bi-check-circle-fill"></i> Avalado por instructores certificados</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== COURSES ====== -->
+  <section class="section courses-section" id="courses">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Cursos</span>
+        <h2 class="section-title">Simulaciones interactivas diseñadas para salvar vidas</h2>
+        <p class="section-subtitle">Cada curso combina teoría con práctica mediante simulaciones realistas que te preparan para actuar en emergencias reales.</p>
+      </div>
+      <div class="courses-grid">
+        <div class="course-card fade-in">
+          <div class="course-cover">
+            <img src="assets/images/cursos/c1-reanimacion.png" alt="RCP" loading="lazy">
+            <div class="overlay"></div>
+            <div class="icon"><i class="bi bi-heart-pulse"></i></div>
+            <span class="badge badge-popular">Popular</span>
+            <span class="course-level">Principiante</span>
+          </div>
+          <div class="course-info">
+            <h3>Reanimación Cardiopulmonar (RCP)</h3>
+            <p>Aprende las técnicas de RCP para adultos, niños y bebés con simulaciones interactivas paso a paso.</p>
+            <div class="course-meta">
+              <span><i class="bi bi-clock"></i> 4 horas</span>
+              <span class="price free">Gratis</span>
+            </div>
+            <a href="#" class="course-btn">Ver curso <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="course-card fade-in">
+          <div class="course-cover">
+            <img src="assets/images/cursos/c2-heimlich.png" alt="Atragantamiento" loading="lazy">
+            <div class="overlay"></div>
+            <div class="icon"><i class="bi bi-lungs"></i></div>
+            <span class="badge badge-new">Nuevo</span>
+            <span class="course-level">Principiante</span>
+          </div>
+          <div class="course-info">
+            <h3>Maniobra de Heimlich</h3>
+            <p>Domina la maniobra de Heimlich y las técnicas de desobstrucción de la vía aérea en adultos y niños.</p>
+            <div class="course-meta">
+              <span><i class="bi bi-clock"></i> 3 horas</span>
+              <span class="price free">Gratis</span>
+            </div>
+            <a href="#" class="course-btn">Ver curso <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="course-card fade-in">
+          <div class="course-cover">
+            <img src="assets/images/cursos/c3-quemaduras.png" alt="Quemaduras" loading="lazy">
+            <div class="overlay"></div>
+            <div class="icon"><i class="bi bi-fire"></i></div>
+            <span class="badge badge-premium">Premium</span>
+            <span class="course-level">Intermedio</span>
+          </div>
+          <div class="course-info">
+            <h3>Quemaduras y Lesiones Térmicas</h3>
+            <p>Identifica los tipos de quemaduras y aprende a tratarlas correctamente según su gravedad.</p>
+            <div class="course-meta">
+              <span><i class="bi bi-clock"></i> 3 horas</span>
+              <span class="price">S/ 29.90</span>
+            </div>
+            <a href="#" class="course-btn">Ver curso <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="course-card fade-in">
+          <div class="course-cover">
+            <img src="assets/images/cursos/c4-hemorragia.png" alt="Hemorragias" loading="lazy">
+            <div class="overlay"></div>
+            <div class="icon"><i class="bi bi-droplet"></i></div>
+            <span class="badge badge-premium">Premium</span>
+            <span class="course-level">Intermedio</span>
+          </div>
+          <div class="course-info">
+            <h3>Control de Hemorragias</h3>
+            <p>Aprende a identificar y controlar diferentes tipos de hemorragias con técnicas de compresión y torniquetes.</p>
+            <div class="course-meta">
+              <span><i class="bi bi-clock"></i> 3 horas</span>
+              <span class="price">S/ 29.90</span>
+            </div>
+            <a href="#" class="course-btn">Ver curso <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="course-card fade-in">
+          <div class="course-cover">
+            <img src="assets/images/cursos/c5-sismos.png" alt="Sismos" loading="lazy">
+            <div class="overlay"></div>
+            <div class="icon"><i class="bi bi-house-door"></i></div>
+            <span class="badge badge-free">Gratis</span>
+            <span class="course-level">Principiante</span>
+          </div>
+          <div class="course-info">
+            <h3>Preparación ante Sismos</h3>
+            <p>Aprende a actuar antes, durante y después de un sismo. Incluye simulaciones de evacuación y primeros auxilios en desastres.</p>
+            <div class="course-meta">
+              <span><i class="bi bi-clock"></i> 2 horas</span>
+              <span class="price free">Gratis</span>
+            </div>
+            <a href="#" class="course-btn">Ver curso <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="course-card fade-in">
+          <div class="course-cover">
+            <img src="assets/images/cursos/c6-cortes.png" alt="Cortes y Heridas" loading="lazy">
+            <div class="overlay"></div>
+            <div class="icon"><i class="bi bi-bandage"></i></div>
+            <span class="badge badge-soon">Próximamente</span>
+            <span class="course-level">Principiante</span>
+          </div>
+          <div class="course-info">
+            <h3>Cortes y Heridas Menores</h3>
+            <p>Aprende a limpiar, desinfectar y vendar heridas menores de forma segura para prevenir infecciones.</p>
+            <div class="course-meta">
+              <span><i class="bi bi-clock"></i> 2 horas</span>
+              <span class="price free">Gratis</span>
+            </div>
+            <a href="#" class="course-btn">Ver curso <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== GAMIFICATION ====== -->
+  <section class="section gamification-section" id="gamification">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Gamificación</span>
+        <h2 class="section-title">Aprender nunca fue tan adictivo</h2>
+        <p class="section-subtitle">Convierte el aprendizaje en un juego. Gana puntos, desbloquea logros y compite por el primer lugar.</p>
+      </div>
+      <div class="gamification-grid">
+        <div class="gam-card fade-in">
+          <div class="gam-icon-wrap gam-icon-yellow"><i class="bi bi-star-fill"></i></div>
+          <h4>Puntos de Experiencia</h4>
+          <p>Gana XP completando módulos, practicando simulaciones y aprobando evaluaciones.</p>
+          <span class="gam-value">+50 XP por simulación</span>
+        </div>
+        <div class="gam-card fade-in">
+          <div class="gam-icon-wrap gam-icon-blue"><i class="bi bi-shield-fill"></i></div>
+          <h4>Insignias</h4>
+          <p>Desbloquea insignias al alcanzar hitos: Primeros Auxilios, Experto en RCP, Veterano y más.</p>
+          <span class="gam-value">12 insignias disponibles</span>
+        </div>
+        <div class="gam-card fade-in">
+          <div class="gam-icon-wrap gam-icon-orange"><i class="bi bi-lightning-fill"></i></div>
+          <h4>Rachas</h4>
+          <p>Mantén tu racha de práctica diaria para multiplicar tus puntos y no perder el ritmo.</p>
+          <span class="gam-value">🔥 15 días seguidos</span>
+        </div>
+        <div class="gam-card fade-in">
+          <div class="gam-icon-wrap gam-icon-gold"><i class="bi bi-trophy-fill"></i></div>
+          <h4>Rankings</h4>
+          <p>Compite con otros estudiantes y escala posiciones en las tablas de clasificación semanales.</p>
+          <span class="gam-value">Top 10% esta semana</span>
+        </div>
+      </div>
+      <div class="gamification-profile fade-in">
+        <div class="profile-avatar">
+          <span>JM</span>
+          <div class="profile-rank">Nv. 15</div>
+        </div>
+        <div class="profile-info">
+          <div class="profile-header">
+            <h4>José Martínez</h4>
+            <span class="profile-badge"> <i class="bi bi-patch-check-fill"></i> Estrella</span>
+          </div>
+          <div class="level">2,340 XP · Aprendiz Avanzado</div>
+          <div class="profile-xp">
+            <div class="xp-bar">
+              <div class="fill"></div>
+            </div>
+            <span>1,240 / 2,000 XP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== STORE ====== -->
+  <section class="section" id="store">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Tienda</span>
+        <h2 class="section-title">Equípate para cualquier emergencia</h2>
+        <p class="section-subtitle">Productos seleccionados por nuestros instructores para que tengas todo lo necesario ante una emergencia.</p>
+      </div>
+      <div class="store-grid">
+        <div class="store-card fade-in">
+          <div class="store-img">
+            <img src="assets/images/productos/p1-botiquin-familiar.png" alt="Botiquín Familiar" loading="lazy">
+            <div class="store-img-overlay"></div>
+            <span class="store-category">Hogar</span>
+          </div>
+          <div class="store-info">
+            <h4>Botiquín Familiar</h4>
+            <div class="store-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> <span>(4.5)</span></div>
+            <p>Botiquín completo para el hogar con vendas, gasas, antisépticos, tijeras y más.</p>
+            <div class="store-footer">
+              <span class="store-price">S/ <strong>89.90</strong></span>
+              <button class="store-btn"><i class="bi bi-cart-plus"></i> Añadir</button>
+            </div>
+          </div>
+        </div>
+        <div class="store-card fade-in">
+          <div class="store-img">
+            <img src="assets/images/productos/p2-torniquete-tactico.png" alt="Torniquete Táctico" loading="lazy">
+            <div class="store-img-overlay"></div>
+            <span class="store-category">Emergencia</span>
+          </div>
+          <div class="store-info">
+            <h4>Torniquete Táctico</h4>
+            <div class="store-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> <span>(5.0)</span></div>
+            <p>Torniquete de alta resistencia para control de hemorragias severas en emergencias.</p>
+            <div class="store-footer">
+              <span class="store-price">S/ <strong>49.90</strong></span>
+              <button class="store-btn"><i class="bi bi-cart-plus"></i> Añadir</button>
+            </div>
+          </div>
+        </div>
+        <div class="store-card fade-in">
+          <div class="store-img">
+            <img src="assets/images/productos/p3-mochila-emergencia.png" alt="Mochila de Emergencia" loading="lazy">
+            <div class="store-img-overlay"></div>
+            <span class="store-category">Supervivencia</span>
+            <span class="store-tag">Envío gratis</span>
+          </div>
+          <div class="store-info">
+            <h4>Mochila de Emergencia</h4>
+            <div class="store-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i> <span>(4.0)</span></div>
+            <p>Mochila preparada con suministros básicos para 72 horas de supervivencia.</p>
+            <div class="store-footer">
+              <span class="store-price">S/ <strong>149.90</strong></span>
+              <button class="store-btn"><i class="bi bi-cart-plus"></i> Añadir</button>
+            </div>
+          </div>
+        </div>
+        <div class="store-card fade-in">
+          <div class="store-img">
+            <img src="assets/images/productos/p4-kit-rcp.png" alt="Kit RCP" loading="lazy">
+            <div class="store-img-overlay"></div>
+            <span class="store-category">Capacitación</span>
+          </div>
+          <div class="store-info">
+            <h4>Kit RCP</h4>
+            <div class="store-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> <span>(5.0)</span></div>
+            <p>Kit de práctica de RCP con maniquí plegable, mascarilla y guantes de látex.</p>
+            <div class="store-footer">
+              <span class="store-price">S/ <strong>199.90</strong></span>
+              <button class="store-btn"><i class="bi bi-cart-plus"></i> Añadir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TESTIMONIALS ====== -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Testimonios</span>
+        <h2 class="section-title">Lo que dicen nuestros estudiantes</h2>
+        <p class="section-subtitle">Más de 50,000 personas ya confían en SafeStep para su formación en primeros auxilios.</p>
+      </div>
+      <div class="testimonials-wrapper">
+        <div class="testimonials-track">
+          <div class="testimonial-card">
+            <div class="testimonial-card-inner">
+              <img src="assets/images/usuarios/persona_1.png" alt="María García" class="testimonial-avatar" loading="lazy">
+              <blockquote>"SafeStep me dio la confianza para actuar cuando mi hijo se atragantó. Las simulaciones son tan realistas que supe exactamente qué hacer. Recomiendo esta plataforma a todos los padres."</blockquote>
+              <cite>María García <span>Madre de familia · Lima, Perú</span></cite>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card-inner">
+              <img src="assets/images/usuarios/persona_2.png" alt="Carlos Mendoza" class="testimonial-avatar" loading="lazy">
+              <blockquote>"Como instructor de primeros auxilios, recomiendo SafeStep a todos mis alumnos. La combinación de gamificación y simulaciones hace que el aprendizaje sea efectivo y entretenido."</blockquote>
+              <cite>Carlos Mendoza <span>Instructor certificado · Buenos Aires, Argentina</span></cite>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card-inner">
+              <img src="assets/images/usuarios/persona_3.png" alt="Ana Torres" class="testimonial-avatar" loading="lazy">
+              <blockquote>"Implementamos SafeStep en nuestra empresa y la respuesta del equipo ha sido increíble. Ahora todos se sienten preparados para responder ante una emergencia laboral."</blockquote>
+              <cite>Ana Torres <span>Gerente de RRHH · Empresa Tech Solutions</span></cite>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="testimonial-prev" aria-label="Anterior"><i class="bi bi-chevron-left"></i></button>
+          <div class="testimonial-dots">
+            <button class="active" aria-label="Testimonio 1"></button>
+            <button aria-label="Testimonio 2"></button>
+            <button aria-label="Testimonio 3"></button>
+          </div>
+          <button class="testimonial-next" aria-label="Siguiente"><i class="bi bi-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FAQ ====== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">FAQ</span>
+        <h2 class="section-title">Preguntas frecuentes</h2>
+        <p class="section-subtitle">Resolvemos tus dudas sobre SafeStep y nuestro método de aprendizaje.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item active">
+          <button class="faq-question">
+            ¿Necesito experiencia previa en primeros auxilios?
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>No, SafeStep está diseñado para principiantes. Nuestro contenido es progresivo: comienza con los fundamentos y avanza hasta técnicas avanzadas. Cada módulo incluye explicaciones claras y simulaciones guiadas.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Las certificaciones tienen validez oficial?
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Nuestros certificados son avalados por instructores certificados en primeros auxilios. Si bien no reemplazan una certificación presencial oficial, muchos empleadores reconocen nuestra formación como capacitación válida en el área.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Cuánto tiempo toma completar un curso?
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Los cursos varían entre 2 y 4 horas, dependiendo de la complejidad. Puedes avanzar a tu propio ritmo y retomar donde lo dejaste en cualquier momento. La mayoría de estudiantes completan un curso en 1-2 semanas.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿SafeStep funciona sin conexión a internet?
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Actualmente necesitas conexión a internet para acceder a las simulaciones interactivas. Sin embargo, el contenido teórico está disponible para descarga y consulta offline desde la aplicación móvil.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Hay planes para empresas o instituciones?
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Sí, ofrecemos planes corporativos con paneles de administración, seguimiento de progreso y certificaciones masivas. Contáctanos para recibir una cotización personalizada para tu organización.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CTA ====== -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Comienza a salvar vidas hoy</h2>
+        <p>Únete a más de 50,000 personas que ya confían en SafeStep para su formación en primeros auxilios.</p>
+      </div>
+      <div class="cta-buttons">
+        <a href="#" class="btn btn-primary" style="background: white; color: var(--primary-deeper); box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+          Crear Cuenta Gratis <i class="bi bi-arrow-right"></i>
+        </a>
+        <a href="#" class="btn btn-secondary">
+          <i class="bi bi-play-circle"></i> Ver Plataforma
+        </a>
+      </div>
+      <div class="cta-benefits">
+        <span><i class="bi bi-check-circle-fill"></i> Sin compromiso</span>
+        <span><i class="bi bi-check-circle-fill"></i> Acceso a todos los cursos gratis</span>
+        <span><i class="bi bi-check-circle-fill"></i> Certificado al completar</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="assets/images/logo-safestep.png" alt="SafeStep Logo" loading="lazy">
+            Safe<span>Step</span>
+          </a>
+          <p>SafeStep es una plataforma interactiva de primeros auxilios creada por Chronos, una startup dedicada a democratizar la educación en emergencias médicas.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Producto</h4>
+          <div class="footer-links">
+            <a href="#features">Características</a>
+            <a href="#courses">Cursos</a>
+            <a href="#gamification">Gamificación</a>
+            <a href="#store">Tienda</a>
+            <a href="#testimonials">Testimonios</a>
+          </div>
+        </div>
+        <div>
+          <h4>Empresa</h4>
+          <div class="footer-links">
+            <a href="about.html">Acerca de</a>
+            <a href="about.html#team">Equipo</a>
+            <a href="#">Blog</a>
+            <a href="#">Prensa</a>
+            <a href="#">Contacto</a>
+          </div>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <div class="footer-links">
+            <a href="#">Términos y Condiciones</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Política de Cookies</a>
+            <a href="#">Aviso Legal</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 SafeStep by Chronos. Todos los derechos reservados.</span>
+        <span>Hecho con <i class="bi bi-heart-fill" style="color: var(--secondary-red);"></i> para salvar vidas</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
