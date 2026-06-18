@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://safestep-11990.web.app/sitemap.xml
